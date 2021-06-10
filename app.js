@@ -80,5 +80,5 @@ if (process.env.NODE_ENV == 'production') {
   app.use(express.static('client/build'));
 }
 app.listen(process.env.PORT || 8282, () => {
-  console.log('listening on port 8282');
+  console.log(`listening on port ${process.env.PORT || 8282}`);
 });
