@@ -68,14 +68,6 @@ app.post('/invoice', async (req, res) => {
   res.end();
 });
 
-app.get('/view', (req, res) => {
-  const id = '123123';
-  const name = 'Adan';
-  const amount = '1220';
-  const date = '2020';
-  res.render('template', { id, name, amount, date });
-});
-
 if (process.env.NODE_ENV == 'production') {
   app.use(express.static('client/build'));
   const path = require('path');
